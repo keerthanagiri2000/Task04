@@ -1,0 +1,133 @@
+1.How to compare two JSON have the same properties without order?
+   a.var obj1 = { name: "Person 1", age:5 };
+   b.var obj2 = { age:5, name: "Person 1" };
+
+Answer:
+   var obj1={name:"Person 1", age:5 };
+   var obj2={age:5, name:"Person 2" };
+   
+   var flag=true;
+   if(Object.keys(obj1).length==Object.keys(obj2).length){
+      for(var keys in obj1){
+          if(obj1[key]==obj2[key]){
+             continue;
+          }
+          else{
+                 flag=false;
+                 break;
+           }
+      }
+   }
+   else{
+           flag=false;
+}
+console.log(" "+flag);
+
+2.Use the rest countries API url -> https://restcountries.eu/rest/v2/all and display all the country flags in console
+   
+Answer;
+       var request=new XMLHttpRequest();
+       request.open('GET','https://restcountries.com/v3.1/all',true);
+       request.send();
+       request.onload=function(){
+         var data=JSON.parse(request.response);
+            console.log(data);
+       for(var i=0;i<data.length;i++){
+        console.log(data[i].flag);
+          }
+    } 
+
+3.Use the same rest countries and print all countries name, region, sub region and population
+
+Answer;
+         var request=new XMLHttpRequest();
+       request.open('GET','https://restcountries.com/v3.1/all',true);
+       request.send();
+       request.onload=function(){
+         var data=JSON.parse(request.response);
+            console.log(data);
+       for(var i=0;i<data.length;i++){
+        console.log(data[i].name,data[i].region,data[i].subregion,data[i].population);
+          }
+    } 
+
+4.i)Declare four variables without assigning values and print them in console
+     Answer;
+
+       let a = userInput[0];
+       let b = userInput[1];
+       let c = userInput[2];
+       let d = userInput[3];
+         console.log(a,b,c,d);
+
+   ii)How to get value of the variable myvar as output
+      Answer;
+
+      var myvar=2;
+      console.log(myvar);
+
+   iii)Declare variables to store your first name, last name, marital status, country and age in multiple lines
+       Answer;
+
+       let firstname="";
+       let lastname="";
+       let maritalstatus="";
+       let country="";
+       let age=userInput[0];
+
+        
+   iv)Declare variables to store your first name, last name, marital status, country and age in a single line
+       Answer;
+
+       let ans =[firstname="", lastname="", maritalstatus="", country="",age=""];
+
+   v)Declare variables and assign string, boolean, undefined and null data types
+      Answer;
+
+      let res=23;        //res is now a number
+      let ans="star";  //ans is now a string
+      let x=true;        //ans is now a boolean
+      let a=null;        //a is now a null
+      let b;                //b is  undefined
+   
+   vi)Square of a number
+       Answer;
+
+       let a=userInput[0];
+       console.log(a*a);
+
+  vii)Swapping 2 numbers
+        Answer;
+      
+        var a=5;
+        var b=3;
+        [a,b]=[b,a];
+        console.log(a,b);
+
+  viii)Addition of 3 numbers
+        Answer;
+
+        function sumNumbers(num){
+           return sum =num(0)+num(1)+num(2);
+           console.log(sum)
+         }
+
+   ix)Calculate five test scores and print their average
+        Answer;
+
+        var sum=arr.reduce((a,b)=>a+b,0);
+        var avg=(sum/arr.length) || 0;
+        console.log(avg);
+
+   x)Calculate Simple Interest
+      Answer;
+
+      var P= parseFloat(data[0]);
+      var T= parseFloat(data[1]);
+      var R = parseFloat(data[2]);
+ 
+      console.log(((P*T*R)/100));
+
+       
+      
+              
